@@ -10,7 +10,7 @@ db.produtos.updateMany({
   tags: { $elemMatch: { $regex: /BOVINO/i } },
 }, {
   $inc: { "vendasPorDia.6": 120 },
-})
+});
 
 db.produtos.find({}, {
   _id: 0,
